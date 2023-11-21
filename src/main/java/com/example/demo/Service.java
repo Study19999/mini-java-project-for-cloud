@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import java.util.List;
+
 @org.springframework.stereotype.Service
 public class Service {
     private final Repository repository;
@@ -16,5 +18,9 @@ public class Service {
       repository.save(product);
 
       return product;
+  }
+
+  public List<Product> findAll(){
+        return repository.findAll();
   }
 }
