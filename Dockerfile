@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM eclipse-temurin:17-jdk-alpine AS build
+FROM maven:3.9.5-eclipse-temurin-17-alpine AS build
 COPY . /app
 WORKDIR /app
 RUN ./mvnw clean package -DskipTests
@@ -8,5 +8,5 @@ RUN ./mvnw clean package -DskipTests
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
 EXPOSE 8080
-COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar /app/
-CMD ["java", "-jar", "demo-0.0.1-SNAPSHOT.jar"]
+COPY --from=build /app/target/demo-*-SNAPSHOT.jar /app/demo.jar
+CMD ["java", "-jar", "demo.jar"]
