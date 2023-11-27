@@ -1,8 +1,8 @@
 
 CREATE TABLE IF NOT EXISTS product (
     id INTEGER PRIMARY KEY,
-    title VARCHAR(255),
-    price DOUBLE PRECISION,
+    title CHARACTER VARYING,
+    price BIGINT,
     stock INTEGER
 );
 
