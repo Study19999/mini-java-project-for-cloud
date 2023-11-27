@@ -1,5 +1,5 @@
 # Stage 1: Build the application
-FROM maven:3.9.5-eclipse-temurin-17-alpine AS build
+FROM eclipse-temurin:17-jdk-alpine AS build
 COPY . /app
 WORKDIR /app
 RUN ./mvnw clean package -DskipTests
