@@ -25,4 +25,3 @@ services:
       - SPRING_DATASOURCE_PASSWORD=root
     depends_on:
       - postgres
-
