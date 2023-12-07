@@ -28,6 +28,11 @@ public class Product {
         this.price = price;
         this.stock = stock;
     }
+    public Product(String title, Double price, Integer stock) {
+        this.title = title;
+        this.price = price;
+        this.stock = stock;
+    }
 
     public Integer getId() {
         return id;
