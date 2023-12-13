@@ -19,5 +19,5 @@ services:
       - SPRING_DATASOURCE_URL= jdbc:postgresql://database-task7.cxiu9opm2qfq.us-east-1.rds.amazonaws.com:5432/docker
       - SPRING_DATASOURCE_USERNAME=postgres
       - SPRING_DATASOURCE_PASSWORD=postgresroot
-    depends_on:
-      - postgres
+#    depends_on:
+#      - postgres
