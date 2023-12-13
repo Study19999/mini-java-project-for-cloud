@@ -11,7 +11,7 @@ services:
 #      - "5432:5432"
 
   spring-app:
-    image: marianascu/mini-app:latest
+    image: marianascu/mini-cloud:latest
     container_name: app
     ports:
         - "80:8080"
